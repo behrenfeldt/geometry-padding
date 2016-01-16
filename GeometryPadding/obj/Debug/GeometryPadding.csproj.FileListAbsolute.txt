@@ -1,7 +1,0 @@
-c:\users\johlit\documents\visual studio 2015\Projects\GeometryPadding\GeometryPadding\bin\Debug\GeometryPadding.dll
-c:\users\johlit\documents\visual studio 2015\Projects\GeometryPadding\GeometryPadding\bin\Debug\GeometryPadding.pdb
-c:\users\johlit\documents\visual studio 2015\Projects\GeometryPadding\GeometryPadding\bin\Debug\nunit.framework.dll
-c:\users\johlit\documents\visual studio 2015\Projects\GeometryPadding\GeometryPadding\bin\Debug\nunit.framework.xml
-c:\users\johlit\documents\visual studio 2015\Projects\GeometryPadding\GeometryPadding\obj\Debug\GeometryPadding.csprojResolveAssemblyReference.cache
-c:\users\johlit\documents\visual studio 2015\Projects\GeometryPadding\GeometryPadding\obj\Debug\GeometryPadding.dll
-c:\users\johlit\documents\visual studio 2015\Projects\GeometryPadding\GeometryPadding\obj\Debug\GeometryPadding.pdb
