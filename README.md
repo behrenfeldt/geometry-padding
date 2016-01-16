@@ -1,4 +1,4 @@
 # geometry-padding
 A simple library for padding geometries.
 
-NuGet: Coming Soon
+NuGet: https://www.nuget.org/packages/GeometryPadding/
