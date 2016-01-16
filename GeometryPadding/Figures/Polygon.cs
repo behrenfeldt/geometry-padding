@@ -8,8 +8,6 @@ namespace GeometryPadding.Figures
 {
     public class Polygon : Curve
     {
-        public enum Preposition { Inside, Outside, On }
-
         public Polygon() { }
 
         public Polygon(params Point[] points)

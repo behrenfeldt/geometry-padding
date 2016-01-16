@@ -97,7 +97,7 @@ namespace GeometryPadding.Figures
             return newPoints;
         }
 
-        public Curve LateralOffsetCurve(
+        private Curve LateralOffsetCurve(
                 Enums.LateralPosition? lateralPosition, double offset)
         {
             Curve curve;
