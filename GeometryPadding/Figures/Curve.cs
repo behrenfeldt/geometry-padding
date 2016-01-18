@@ -53,7 +53,8 @@ namespace GeometryPadding.Figures
             {
                 curve.Points.Add(new Point(point));
             }
-            curve.RemoveOverlappingPoints2D();
+
+            curve = curve.RemoveOverlappingPoints2D();
             var len = curve.Length;
             curve = CurveStrategies.CutCurve(curve, from * len, to * len);
             curve = curve.RemoveOverlappingPoints2D();
@@ -135,12 +136,18 @@ namespace GeometryPadding.Figures
                 else
                 {
                     // outer intersection
-                    var outerIntersection = CurveStrategies.IntersectionOfCurvesInf(
+                    var outerIntersection = (Point)CurveStrategies.IntersectionOfCurvesInf(
                         shiftedPoints.Points[i],
                         shiftedPoints.Points[i + 1],
                         shiftedPoints.Points[i + 2],
                         shiftedPoints.Points[i + 3]);
-                    if (outerIntersection != null && outerIntersection.GetType() == typeof(Point))
+
+                    var angle = MathHelper.RadToDeg(MathHelper.AngleBetweenLines(
+                        shiftedPoints.Points[i + 1],
+                        outerIntersection,
+                        shiftedPoints.Points[i + 2]));
+
+                    if (angle >= 45f && outerIntersection != null && outerIntersection.GetType() == typeof(Point))
                     {
                         shiftedPoints.Points[i + 1].X = ((Point)outerIntersection).X;
                         shiftedPoints.Points[i + 1].Y = ((Point)outerIntersection).Y;
