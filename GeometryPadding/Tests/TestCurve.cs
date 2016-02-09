@@ -2,6 +2,8 @@
 {
     using Figures;
 
+    using GeometryPadding.Misc;
+
     using NUnit.Framework;
 
     [TestFixture]
@@ -77,6 +79,29 @@
             Assert.That(polygon.Points[6].Y, Is.EqualTo(0));
             var s = polygon.ToWkt();
             Assert.AreEqual(s, "((-5 0, -5 15, 10 15, 10 5, 5 5, 5 0, -5 0))");
+        }
+
+        [Test]
+        public void CanCreatePolygonRemoveOverlappingOffsettedPoints()
+        {
+            var line = new Curve(
+                new Point(140269.53480959567, 6570034.62979288),
+                new Point(140265.811, 6569999.782),
+                new Point(140264.6760465, 6569990.5984698),
+                new Point(140264.6760465, 6569990.5984698),
+                new Point(140260.972, 6569960.627),
+                new Point(140260.972, 6569960.627),
+                new Point(140260.454, 6569956.429),
+                new Point(140258.1810254, 6569940.8646021),
+                new Point(140258.1810254, 6569940.8646021),
+                new Point(140255.205, 6569920.486),
+                new Point(140255.205, 6569920.486),
+                new Point(140252.873, 6569904.517),
+                new Point(140248.809, 6569871.397),
+                new Point(140246.11606674892, 6569853.680439134)
+                );
+
+            line.CreatePolygonFromCurve(0.0, 1.0, 1.0);
         }
     }
 }

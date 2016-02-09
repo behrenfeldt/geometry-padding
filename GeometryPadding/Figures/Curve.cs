@@ -116,6 +116,8 @@ namespace GeometryPadding.Figures
                 shiftedPoints.Points.Add(shiftedPointsTmp.Points[1]);
             }
 
+            shiftedPoints = shiftedPoints.RemoveOverlappingPoints2D();
+
             var cntShifted = shiftedPoints.Points.Count();
             for (var i = 0; i < cntShifted - 3; i += 2)
             {
